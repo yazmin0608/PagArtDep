@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Página de Deportes - Página 1</title>
+  <meta name="description" content="Noticias, resultados y calendario deportivo" />
+  <style>
+    /* Reset sencillo */
+    :root{--accent:#0077cc;--muted:#6b7280;--bg:#0f172a;--card:#0b1220}
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,Arial,Helvetica,sans-serif;margin:0;background:linear-gradient(180deg,#07102a 0%, #071122 100%);color:#e6eef8;line-height:1.4}
+    a{color:var(--accent);text-decoration:none}
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;background:rgba(255,255,255,0.02);backdrop-filter:blur(4px);position:sticky;top:0;z-index:20}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#00b4ff);display:flex;align-items:center;justify-content:center;font-weight:700;color:#021628}
+    nav ul{display:flex;gap:14px;list-style:none;padding:0;margin:0}
+    .search{display:flex;align-items:center;gap:8px}
+    .btn{background:var(--accent);color:white;padding:8px 12px;border-radius:8px;border:0;cursor:pointer}
+
+    /* layout */
+    .container{max-width:1100px;margin:28px auto;padding:0 18px}
+    .grid{display:grid;grid-template-columns:2fr 1fr;gap:18px}
+
+    /* Hero */
+    .hero{background:linear-gradient(90deg, rgba(0,0,0,0.35), rgba(6,10,18,0.3));padding:18px;border-radius:12px;display:flex;gap:18px}
+    .hero-left{flex:1}
+    .hero img{width:100%;height:220px;object-fit:cover;border-radius:10px}
+    .kicker{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+    .headline{font-size:22px;margin:8px 0}
+    .meta{color:var(--muted);font-size:13px}
+
+    /* cards */
+    .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
+    .card{background:rgba(255,255,255,0.02);padding:12px;border-radius:10px}
+
+    /* sidebar */
+    .sidebar-section{background:rgba(255,255,255,0.02);padding:12px;border-radius:10px;margin-bottom:12px}
+    .team{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px dashed rgba(255,255,255,0.03)}
+    .team:last-child{border-bottom:0}
+
+    /* scores */
+    .scores{display:flex;flex-direction:column;gap:8px}
+    .score{display:flex;justify-content:space-between;align-items:center;padding:8px;background:rgba(0,0,0,0.2);border-radius:8px}
+    .live{color:#ff4d4f;font-weight:700}
+
+    /* table */
+    table{width:100%;border-collapse:collapse;margin-top:8px}
+    th,td{padding:8px;text-align:left;border-bottom:1px solid rgba(255,255,255,0.03)}
+    th{color:var(--muted);font-size:13px}
+
+    /* footer */
+    footer{margin-top:28px;padding:20px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* responsive */
+    @media (max-width:880px){.grid{grid-template-columns:1fr}.hero img{height:170px}.cards{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">SD</div>
+      <div>
+        <div style="font-weight:700">SportsDay</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:2px">Noticias y resultados</div>
+      </div>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#noticias">Noticias</a></li>
+        <li><a href="#resultados">Resultados</a></li>
+        <li><a href="#calendario">Calendario</a></li>
+        <li><a href="#equipos">Equipos</a></li>
+      </ul>
+    </nav>
+
+    <div class="search">
+      <input type="search" placeholder="Buscar..." style="padding:8px;border-radius:8px;border:0;background:rgba(255,255,255,0.03);color:inherit" />
+      <button class="btn">Suscribirse</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero + sidebar -->
+    <section class="grid">
+      <div>
+        <div class="hero">
+          <div class="hero-left">
+            <div class="kicker">Fútbol • En vivo</div>
+            <h1 class="headline">Atlético vs Real: Final de Ida — Resultado 2-1</h1>
+            <div class="meta">Actualizado: 12 de agosto de 2025 — Estadio Nacional</div>
+            <img src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Partido en vivo"/>
+            <p style="margin-top:10px;color:var(--muted)">Resumen breve del partido: gran intensidad en el primer tiempo, gol tempranero y remontada en la segunda mitad. Estadísticas destacadas y análisis táctico en el artículo completo.</p>
+
+            <div class="cards">
+              <article class="card">
+                <div class="kicker">Baloncesto</div>
+                <h3 style="margin:6px 0">Victoria de los Tigres 98-91</h3>
+                <div class="meta">Jugador del partido: J. Ramirez — 28 pts</div>
+              </article>
+
+              <article class="card">
+                <div class="kicker">Tenis</div>
+                <h3 style="margin:6px 0">Sánchez avanza a semifinales</h3>
+                <div class="meta">Ronda: Cuartos — Duración: 2h 13m</div>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <!-- Noticias principales -->
+        <section id="noticias" style="margin-top:16px">
+          <h2 style="margin:0 0 10px 0">Noticias principales</h2>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
+            <article style="background:rgba(255,255,255,0.02);padding:12px;border-radius:10px">
+              <h4>Fútbol juvenil: promesas de la cantera</h4>
+              <p style="color:var(--muted);font-size:13px">Un vistazo a los talentos emergentes que podrían cambiar la próxima temporada.</p>
+            </article>
+            <article style="background:rgba(255,255,255,0.02);padding:12px;border-radius:10px">
+              <h4>Ciclismo: vuelta a la ciudad</h4>
+              <p style="color:var(--muted);font-size:13px">Recorrido, favoritos y datos de interés antes de la largada.</p>
+            </article>
+            <article style="background:rgba(255,255,255,0.02);padding:12px;border-radius:10px">
+              <h4>Boxeo: título en juego</h4>
+              <p style="color:var(--muted);font-size:13px">Previa del choque por el cinturón superligero.</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- Resultados recientes -->
+        <section id="resultados" style="margin-top:18px">
+          <h2>Resultados recientes</h2>
+          <div class="scores" style="margin-top:8px">
+            <div class="score"><div>Atlético 2 — 1 Real</div><div class="live">Final</div></div>
+            <div class="score"><div>Tigres 98 — 91 Leones</div><div>Final</div></div>
+            <div class="score"><div>Mariners 3 — 4 Hawks</div><div>Últ. inning</div></div>
+          </div>
+        </section>
+
+        <!-- Calendario -->
+        <section id="calendario" style="margin-top:18px">
+          <h2>Próximos encuentros</h2>
+          <table aria-label="Calendario de partidos">
+            <thead>
+              <tr><th>Fecha</th><th>Encuentro</th><th>Hora</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>14 ago 2025</td><td>Real vs Tigres</td><td>18:00</td></tr>
+              <tr><td>15 ago 2025</td><td>Atlético vs Hawks</td><td>20:30</td></tr>
+              <tr><td>16 ago 2025</td><td>Sánchez vs Novak</td><td>10:00</td></tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+
+      <!-- Sidebar -->
+      <aside>
+        <div class="sidebar-section">
+          <h3 style="margin:0 0 8px 0">Equipos destacados</h3>
+          <div class="team"><div style="width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,#ffd166,#ff7b00);display:flex;align-items:center;justify-content:center;color:#071022;font-weight:700">AT</div>
+            <div>
+              <div style="font-weight:700">Atlético</div>
+              <div style="font-size:12px;color:var(--muted)">Pos: 1 Liga</div>
+            </div>
+          </div>
+
+          <div class="team"><div style="width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,#bde0fe,#0096c7);display:flex;align-items:center;justify-content:center;color:#021022;font-weight:700">RL</div>
+            <div>
+              <div style="font-weight:700">Real</div>
+              <div style="font-size:12px;color:var(--muted)">Pos: 3 Liga</div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="sidebar-section">
+          <h3 style="margin:0 0 8px 0">Clasificación rápida</h3>
+          <table>
+            <thead>
+              <tr><th>Equipo</th><th>Puntos</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Atlético</td><td>42</td></tr>
+              <tr><td>Real</td><td>38</td></tr>
+              <tr><td>Tigres</td><td>35</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="sidebar-section">
+          <h3 style="margin:0 0 8px 0">Boletín</h3>
+          <p style="color:var(--muted);font-size:13px">Recibe las noticias más importantes en tu correo.</p>
+          <form onsubmit="event.preventDefault();alert('Gracias por suscribirte!')">
+            <input type="email" placeholder="tucorreo@example.com" required style="width:100%;padding:8px;border-radius:8px;border:0;background:rgba(255,255,255,0.02);color:inherit;margin-bottom:8px" />
+            <button class="btn" style="width:100%">Suscribirme</button>
+          </form>
+        </div>
+
+      </aside>
+    </section>
+
+    <footer>
+      <div style="max-width:900px;margin:0 auto">© 2025 SportsDay — Diseñado para noticias deportivas rápidas y confiables. <span style="display:block;margin-top:8px">Contacto: contacto@sportsday.example</span></div>
+    </footer>
+  </main>
+</body>
+</html>
+
